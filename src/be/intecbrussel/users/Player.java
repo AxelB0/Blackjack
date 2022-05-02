@@ -5,8 +5,34 @@ public class Player {
     private String player;
     private double money;
     private int age;
+
 //    private Statistics Statistics;
 
+    public Player(){
+        this ("Default",0.00,18);
+    }
+
+    public Player(String player, double money, int age){
+        this.player = player;
+        this.money = money;
+        this.age = age;
+    }
+
+    public void setPlayer(String player) {
+        this.player = player;
+    }
+
+    public void setMoney(double money) {
+        this.money = money;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+        if (age<18){
+            System.out.println("Too young to play, come back later!");
+            System.exit(0);
+        }
+    }
 
     public String getPlayer() {
         return player;

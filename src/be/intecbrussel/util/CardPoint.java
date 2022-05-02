@@ -12,6 +12,9 @@ public class CardPoint {
         } else {
             return Integer.valueOf(value);
         }
+
+
+
     }
 
 
